@@ -17,7 +17,7 @@ public class Main {
         System.out.println("\nIngrese 0 para salir");
 
         do {
-            System.out.print("\nIngrese el número del candidato según corresponda: ");
+            System.out.print("Ingrese el número del candidato según corresponda: ");
             candidato = sc.nextInt();
 
             if (candidato == 0) break;
@@ -27,7 +27,7 @@ public class Main {
                 totalVotos++;
 
             } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("El candidato no existe \nError: " + e.getMessage());
+                System.out.println("El candidato no existe \nError: " + e.getMessage() + "\n");
             }
 
         }while(true);
