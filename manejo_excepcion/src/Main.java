@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void numeroImpar(int numero) throws Exception{
+    public static void numeroImpar(int numero){
         if(numero % 2 != 0){
-            throw new Exception("El número impar");
+            throw new IllegalArgumentException("El número impar");
         }
 
         System.out.println("El número es par");
@@ -21,11 +21,9 @@ public class Main {
             System.out.print("\nIntroduce un número: ");
             numero = sc.nextInt();
 
-//            if ((char) numero == 'e') break;
-
             try {
                 numeroImpar(numero);
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println("Oh no! " + e.getMessage());
             }
 
