@@ -1,0 +1,27 @@
+{
+  "name": "markdown-editor",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "set DEBUG=true && electron .",
+    "build:win": "electron-builder --win --dir",
+    "publish:github": "build --win -p always"
+  },
+  "build": {
+    "appId": "com.my.markdown-editor",
+    "publish": {
+      "provider": "github",
+      "owner": "<username>",
+      "repo": "electron-updates"
+    }
+  },
+  "devDependencies": {
+    "electron": "^7.0.0",
+    "electron-builder": "^21.2.0"
+  },
+  "dependencies": {
+    "electron-updater": "*",
+    "simplemde": "^1.11.2"
+  }
+}
